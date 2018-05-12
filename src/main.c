@@ -15,12 +15,12 @@ int main (void) {
     GPIOC->MODER |= GPIO_MODER_MODER13_0;
 
     while (1) {
-        // Reset the bit for port C13
+        // Reset the state of pin 13 to output low
         GPIOC->BSRR = GPIO_BSRR_BR_13;
 
         delay(500);
 
-        // Set the bit for port C13
+        // Set the state of pin 13 to output high
         GPIOC->BSRR = GPIO_BSRR_BS_13;
 
         delay(500);
